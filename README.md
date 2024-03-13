@@ -28,3 +28,11 @@ Executar projeto localmente
 ```
 make run
 ```
+Criar app:
+- make create_app APP=[nome do app]
+- Exemplo:
+
+```
+make create_app APP=contact
+```
+
