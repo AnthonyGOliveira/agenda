@@ -18,6 +18,8 @@ source venv/bin/activate
 Este projeto utiliza: 
 
 - [Django](https://www.djangoproject.com)
+- [Venv](https://docs.python.org/3/library/venv.html)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
 
 
 
