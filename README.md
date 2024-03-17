@@ -36,3 +36,35 @@ Criar app:
 make create_app APP=contact
 ```
 
+Gerar migrations:
+
+```
+make makemigrations
+```
+
+Executar migrations:
+
+```
+make migrate
+```
+
+Gerar super usuário
+
+```
+make createsuperuser
+```
+
+ALterar password de  super usuário:
+
+- make changepassword USERNAME=[nome do super usuário]
+- Exemplo:
+
+```
+make changepassword USERNAME=teste
+```
+
+Coletar arquivos estáticos
+
+```
+make collectstatic
+```
