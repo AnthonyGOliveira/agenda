@@ -29,11 +29,10 @@ Executar projeto localmente
 make run
 ```
 Criar app:
-- make create_app APP=[nome do app]
-- Exemplo:
 
 ```
-make create_app APP=contact
+make create_app APP=[nome do app]
+EX: make create_app APP=contact
 ```
 
 Gerar migrations:
@@ -56,11 +55,9 @@ make createsuperuser
 
 ALterar password de  super usuário:
 
-- make changepassword USERNAME=[nome do super usuário]
-- Exemplo:
-
 ```
-make changepassword USERNAME=teste
+make changepassword USERNAME=[nome do super usuário]
+EX: make changepassword USERNAME=teste
 ```
 
 Coletar arquivos estáticos
