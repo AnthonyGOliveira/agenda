@@ -16,6 +16,8 @@ db.sqlite3
 
 # Static files
 /static/
+static/
+media/
 
 # Media files
 /media/
