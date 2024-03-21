@@ -67,3 +67,9 @@ Coletar arquivos estáticos
 ```
 make collectstatic
 ```
+
+Criar usuários fakes
+
+```
+create_users
+```

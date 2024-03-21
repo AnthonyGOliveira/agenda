@@ -21,3 +21,6 @@ changepassword:
 
 collectstatic:
 	python3 manage.py collectstatic
+
+create_users:
+	python3 utils/create_contacts.py 
