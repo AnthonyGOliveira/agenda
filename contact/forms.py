@@ -5,6 +5,14 @@ from django import forms
 
 
 class ContactForm(forms.ModelForm):
+    picture = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'accept': 'image/*'
+            }
+        )
+    )
+
     class Meta:
         model = Contact
         fields = (
@@ -13,7 +21,8 @@ class ContactForm(forms.ModelForm):
             'phone',
             'email',
             'description',
-            'category'
+            'category',
+            'picture'
         )
 
     # def clean(self):
