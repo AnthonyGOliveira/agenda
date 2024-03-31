@@ -2,40 +2,17 @@
 
 {% block content %}
   <div class="form-wrapper">
-
     <h2>Contact</h2>
 
-    <form 
-      action=""
-      method="POST"
-      enctype="multipart/form-data"
-    >
+    <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="form-content">
-        <div class="form-group">
-          <label for="id_first_name">First name</label>
-          <input type="text" name="first_name" maxlength="255" id="id_first_name">
-        </div>
-        <div class="form-group">
-          <label for="id_last_name">Last name</label>
-          <input type="text" name="last_name" maxlength="255" id="id_last_name">
-        </div>
-        <div class="form-group">
-          <label for="id_first_name">First name</label>
-          <input type="text" name="first_name" maxlength="255" id="id_first_name">
-        </div>
-        <div class="form-group">
-          <label for="id_phone">Phone</label>
-          <input type="tel" name="phone" maxlength="255" id="id_phone" pattern="(\(\d{3}\)\s?|\d{2,3}\s?)(\d{4,5}-\d{4})">
-        </div>
-        <div class="form-group">
-          <label for="id_email">Email</label>
-          <input type="email" name="email" maxlength="255" id="id_email">
-        </div>
-        <div class="form-group">
-          <label for="id_description">Description</label>
-          <input type="text" name="description" maxlength="255" id="id_description">
-        </div>
+        {% for field in form %}
+          <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+          </div>
+        {% endfor %}
       </div>
 
       <div class="form-content">
@@ -43,7 +20,6 @@
           <button class="btn" type="submit">Send</button>
         </div>
       </div>
-
     </form>
   </div>
-{% endblock content %}
+{% endblock %}
