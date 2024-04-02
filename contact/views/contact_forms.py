@@ -64,7 +64,7 @@ def delete(request, contact_id):
     confirmation = request.POST.get('confirmation', 'no')
     if confirmation == 'yes':
         contact.delete()
-        return redirect('contact:index')
+        return redirect('index')
 
     return render(
         request,
