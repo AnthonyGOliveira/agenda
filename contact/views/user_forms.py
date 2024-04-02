@@ -15,7 +15,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Usuário registrado')
-            return redirect('contact:login')
+            return redirect('login')
 
     return render(
         request,
@@ -26,7 +26,7 @@ def register(request):
     )
 
 
-@login_required(login_url='contact:login')
+@login_required(login_url='login')
 def user_update(request):
     form = RegisterUpdateForm(instance=request.user)
 
@@ -51,7 +51,7 @@ def user_update(request):
         )
 
     form.save()
-    return redirect('contact:user_update')
+    return redirect('user_update')
 
 
 def login_view(request):
@@ -64,7 +64,7 @@ def login_view(request):
             user = form.get_user()
             auth.login(request, user)
             messages.success(request, 'Logado com sucesso!')
-            return redirect('contact:index')
+            return redirect('index')
         messages.error(request, 'Login inválido')
 
     return render(
@@ -76,7 +76,7 @@ def login_view(request):
     )
 
 
-@login_required(login_url='contact:login')
+@login_required(login_url='login')
 def logout_view(request):
     auth.logout(request)
-    return redirect('contact:login')
+    return redirect('login')
