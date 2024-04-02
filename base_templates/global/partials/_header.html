@@ -1,6 +1,6 @@
 <header class="header">
   <h1 class="header-heading">
-    <a href="{% url 'contact:index' %}" class="header-link">
+    <a href="{% url 'index' %}" class="header-link">
       Agenda
     </a>
   </h1>
@@ -10,20 +10,20 @@
 
       {% if user.is_authenticated %}
         <li class="menu-item">
-          <a href="{% url 'contact:create' %}" class="menu-link">Create</a>
+          <a href="{% url 'create' %}" class="menu-link">Create</a>
         </li>
         <li class="menu-item">
-          <a href="{% url 'contact:user_update' %}" class="menu-link">Profile</a>
+          <a href="{% url 'user_update' %}" class="menu-link">Profile</a>
         </li>
         <li class="menu-item">
-          <a href="{% url 'contact:logout' %}" class="menu-link">Logout</a>
+          <a href="{% url 'logout' %}" class="menu-link">Logout</a>
         </li>
       {% else %}
         <li class="menu-item">
-          <a href="{% url 'contact:login' %}" class="menu-link">Login</a>
+          <a href="{% url 'login' %}" class="menu-link">Login</a>
         </li>      
         <li class="menu-item">
-          <a href="{% url 'contact:register' %}" class="menu-link">Register</a>
+          <a href="{% url 'register' %}" class="menu-link">Register</a>
         </li>      
       {% endif %}
     
@@ -32,7 +32,7 @@
 
   <div class="search">
     <form 
-      action="{% url 'contact:search' %}" 
+      action="{% url 'search' %}" 
       method="GET"
     >
       <input 
